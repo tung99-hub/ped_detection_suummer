@@ -1,0 +1,74 @@
+Using E multiclass adaboost on MIO-TCD dataset with 2 terminal nodes
+Accuracy on fold 1 after 1 iters = 0.36318407960199006
+Accuracy on fold 1 after 2 iters = 0.36318407960199006
+Accuracy on fold 1 after 3 iters = 0.36318407960199006
+Accuracy on fold 1 after 4 iters = 0.4018369690011481
+Accuracy on fold 1 after 5 iters = 0.40362291108559767
+
+Accuracy on fold 2 after 1 iters = 0.3559127439724455
+Accuracy on fold 2 after 2 iters = 0.3559127439724455
+Accuracy on fold 2 after 3 iters = 0.3559127439724455
+Accuracy on fold 2 after 4 iters = 0.35718841688990943
+Accuracy on fold 2 after 5 iters = 0.35718841688990943
+
+Accuracy on fold 3 after 1 iters = 0.36701109835438195
+Accuracy on fold 3 after 2 iters = 0.36701109835438195
+Accuracy on fold 3 after 3 iters = 0.36701109835438195
+Accuracy on fold 3 after 4 iters = 0.3685419058553387
+Accuracy on fold 3 after 5 iters = 0.3685419058553387
+
+Accuracy on fold 4 after 1 iters = 0.3640770506442148
+Accuracy on fold 4 after 2 iters = 0.3640770506442148
+Accuracy on fold 4 after 3 iters = 0.3640770506442148
+Accuracy on fold 4 after 4 iters = 0.3983926521239954
+Accuracy on fold 4 after 5 iters = 0.40324020921035847
+
+Accuracy on fold 5 after 1 iters = 0.36476141872926765
+Accuracy on fold 5 after 2 iters = 0.36476141872926765
+Accuracy on fold 5 after 3 iters = 0.36476141872926765
+Accuracy on fold 5 after 4 iters = 0.40010206685378924
+Accuracy on fold 5 after 5 iters = 0.4025261546312835
+
+Mean accuracy on fold 0 after 1 iters = 0.36298927826045996
+Mean accuracy on fold 1 after 2 iters = 0.36298927826045996
+Mean accuracy on fold 2 after 3 iters = 0.36298927826045996
+Mean accuracy on fold 3 after 4 iters = 0.3852124021448362
+Mean accuracy on fold 4 after 5 iters = 0.38702391953449755
+Overall mean accuracy = 0.3722408312921427
+Using E multiclass adaboost on MIO-TCD dataset with 2 terminal nodes
+Accuracy on fold 1 after 1 iters = 0.3588467916826126
+Accuracy on fold 1 after 2 iters = 0.3588467916826126
+Accuracy on fold 1 after 3 iters = 0.3588467916826126
+Accuracy on fold 1 after 4 iters = 0.3615257048092869
+Accuracy on fold 1 after 5 iters = 0.3652251562699324
+
+Accuracy on fold 2 after 1 iters = 0.36292894501849726
+Accuracy on fold 2 after 2 iters = 0.36292894501849726
+Accuracy on fold 2 after 3 iters = 0.36292894501849726
+Accuracy on fold 2 after 4 iters = 0.39711697920653144
+Accuracy on fold 2 after 5 iters = 0.4008164306671769
+
+Accuracy on fold 3 after 1 iters = 0.364459752519454
+Accuracy on fold 3 after 2 iters = 0.364459752519454
+Accuracy on fold 3 after 3 iters = 0.364459752519454
+Accuracy on fold 3 after 4 iters = 0.4005612960836841
+Accuracy on fold 3 after 5 iters = 0.4005612960836841
+
+Accuracy on fold 4 after 1 iters = 0.3654802908534252
+Accuracy on fold 4 after 2 iters = 0.3654802908534252
+Accuracy on fold 4 after 3 iters = 0.3654802908534252
+Accuracy on fold 4 after 4 iters = 0.37619594336012246
+Accuracy on fold 4 after 5 iters = 0.40617425692052556
+
+Accuracy on fold 5 after 1 iters = 0.36310283235519264
+Accuracy on fold 5 after 2 iters = 0.36310283235519264
+Accuracy on fold 5 after 3 iters = 0.36310283235519264
+Accuracy on fold 5 after 4 iters = 0.3642510844603215
+Accuracy on fold 5 after 5 iters = 0.3642510844603215
+
+Mean accuracy on fold 0 after 1 iters = 0.3629637224858363
+Mean accuracy on fold 1 after 2 iters = 0.3629637224858363
+Mean accuracy on fold 2 after 3 iters = 0.3629637224858363
+Mean accuracy on fold 3 after 4 iters = 0.37993020158398927
+Mean accuracy on fold 4 after 5 iters = 0.38740564488032814
+Overall mean accuracy = 0.3712454027843653
