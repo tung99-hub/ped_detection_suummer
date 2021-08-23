@@ -2,7 +2,7 @@
 """
 Created on Wed Jul 14 17:14:42 2021
 
-@author: subject F
+@author: Tung Nguyen Quang
 """
 import numpy as np
 from pyriemann.utils.distance import distance_logeuclid
@@ -154,7 +154,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-dataset_name", help="Name of the dataset, can be either CIFAR, TAU or MIO-TCD")
     parser.add_argument("-method", help="First letter of the name of the logitboost version, E(uclidean) or R(iemannian)")
-    parser.add_argument("-output_file", help="Use None to print directly to terminal, or anything else to print to a designated file")
+    parser.add_argument("-output", help="Use None to print directly to terminal, or anything else to print to a designated file (this cannot be changed)")
 
     args = parser.parse_args()
     predict(args.dataset_name, args.method, args.output_file)

@@ -5,9 +5,7 @@ Created on Sun Jul  4 17:18:55 2021
 @author: subject F
 """
 import numpy as np
-import glob
-from utils import compute_eight_dimensional_feature, vech, get_features, \
-                    process_classes_list
+from utils import process_classes_list
 
 classes = []
 classes.append('../Datasets/MIO-TCD-Classification/train/articulated_truck/*.jpg')

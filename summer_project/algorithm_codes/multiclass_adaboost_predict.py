@@ -2,7 +2,7 @@
 """
 Created on Fri Jun 25 18:06:59 2021
 
-@author: subject F
+@author: Tung Nguyen Quang
 """
 import numpy as np
 from multiclass_adaboost import *
@@ -90,9 +90,9 @@ if __name__ == '__main__':
             default=[50, 100, 200],  # default list if no arg value
             help="Ascending list containing the iteration numbers to evaluate the accuracy at, for example [1,10,100] will \
                 calculate the accuracy of the algorithm at iterations 1, 10 and 100. The number of iterations will \
-                automatically be the biggest one in the list (in this case it is 100)"
+                automatically be the biggest one in the list (in this case it is 100). Input the iters as 1 10 100, not [1, 10, 100]"
         )
-    parser.add_argument("-output", help="Use None to print directly to terminal, or anything else to print to a designated file")
+    parser.add_argument("-output", help="Use None to print directly to terminal, or anything else to print to a designated file (this cannot be changed)")
     
     args = parser.parse_args()
     predict(args.dataset_name, int(args.n_nodes), args.method, args.test_iters, args.output)
