@@ -54,6 +54,7 @@ def predict(dataset_name, n_nodes, method, test_iters, output_file):
         for i in range(len(mean_scores)):
             print('Mean accuracy on fold {} after {} iters ='.format(i, test_iters[i]), mean_scores[i], file=f)
         print('Overall mean accuracy =', np.mean(mean_scores), file=f)
+        print(file=f)
     
     elif dataset_name == "CIFAR":
         with open(dataset_path, "rb") as file:

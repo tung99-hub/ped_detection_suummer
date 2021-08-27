@@ -157,4 +157,4 @@ if __name__ == '__main__':
     parser.add_argument("-output", help="Use None to print directly to terminal, or anything else to print to a designated file (this cannot be changed)")
 
     args = parser.parse_args()
-    predict(args.dataset_name, args.method, args.output_file)
+    predict(args.dataset_name, args.method, args.output)
