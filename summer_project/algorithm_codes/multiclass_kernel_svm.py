@@ -110,8 +110,7 @@ def predict(dataset_name, method, output_file):
         file = None
     else:
         file = open('../results/multiclass_kernel_SVM_outputs.txt', 'a')
-        
-    print("Using " + method + " multiclass kernel SVM on " + dataset_name + " dataset", file=file)    
+           
     # Different datasets require different strategies
     if dataset_name == 'CIFAR':
         #Dataset already contains separate training and testing sets
@@ -121,7 +120,7 @@ def predict(dataset_name, method, output_file):
             test_X = np.load(f)
             test_y = np.load(f)
         
-        print('Score = ', multiclass_kernel_SVM(train_X, train_y, test_X, test_y, method), file=file)
+        print('Accuracy using {} kernel SVM on CIFAR dataset ='.format(method), multiclass_kernel_SVM(train_X, train_y, test_X, test_y, method), file=file)
         print(file=file)
     
     elif dataset_name in ['MIO-TCD', 'TAU']:
@@ -147,7 +146,7 @@ def predict(dataset_name, method, output_file):
             print(file=file)
             scores.append(score)
         
-        print('Average score across ' + str(n_splits) + ' folds = ', np.mean(scores), file=file)
+        print('Average score across {} folds using {} kernel SVM on {} dataset ='.format(n_splits, method, dataset_name), np.mean(scores), file=file)
         print(file=file)                  
                           
 if __name__ == '__main__':

@@ -1,0 +1,5 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: scikit-learn==0.22 in /home/nguyent98/.local/lib/python3.8/site-packages (0.22)
+Requirement already satisfied: scipy>=0.17.0 in /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2021-03-tf2/e54ecce8/lib/python3.8/site-packages (from scikit-learn==0.22) (1.6.3)
+Requirement already satisfied: joblib>=0.11 in /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2021-03-tf2/e54ecce8/lib/python3.8/site-packages (from scikit-learn==0.22) (1.0.1)
+Requirement already satisfied: numpy>=1.11.0 in /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2021-03-tf2/e54ecce8/lib/python3.8/site-packages (from scikit-learn==0.22) (1.20.2)
