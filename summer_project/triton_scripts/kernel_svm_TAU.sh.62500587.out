@@ -1,0 +1,8 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: scikit-learn==0.22 in /home/nguyent98/.local/lib/python3.8/site-packages (0.22)
+Requirement already satisfied: numpy>=1.11.0 in /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2021-03-tf2/e54ecce8/lib/python3.8/site-packages (from scikit-learn==0.22) (1.20.2)
+Requirement already satisfied: joblib>=0.11 in /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2021-03-tf2/e54ecce8/lib/python3.8/site-packages (from scikit-learn==0.22) (1.0.1)
+Requirement already satisfied: scipy>=0.17.0 in /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2021-03-tf2/e54ecce8/lib/python3.8/site-packages (from scikit-learn==0.22) (1.6.3)
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 62500587.1 ON csl28 CANCELLED AT 2021-08-28T09:31:03 ***
+slurmstepd: error: *** JOB 62500587 ON csl28 CANCELLED AT 2021-08-28T09:31:03 ***

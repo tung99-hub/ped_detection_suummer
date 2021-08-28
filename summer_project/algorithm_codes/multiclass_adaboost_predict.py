@@ -24,7 +24,6 @@ def predict(dataset_name, n_nodes, method, test_iters, output_file):
             f = None
         else:
             f = open("../results/multiclass_adaboost_outputs.txt", "a")
-        print("Using " + method + " multiclass adaboost on " + dataset_name + " dataset with " + str(n_nodes) + " terminal nodes", file=f)
         
         # Using 5-fold CV
         n_splits = 5
@@ -53,7 +52,8 @@ def predict(dataset_name, n_nodes, method, test_iters, output_file):
         mean_scores = np.mean(scores_by_folds, axis=0)
         for i in range(len(mean_scores)):
             print('Mean accuracy on fold {} after {} iters ='.format(i, test_iters[i]), mean_scores[i], file=f)
-        print('Overall mean accuracy =', np.mean(mean_scores), file=f)
+        print('Overall mean accuracy using {} multiclass adaboost on {} with {} nodes ='.format(method, dataset_name, n_nodes), np.mean(mean_scores), file=f)
+        print(file=f)
     
     elif dataset_name == "CIFAR":
         with open(dataset_path, "rb") as file:
@@ -66,8 +66,6 @@ def predict(dataset_name, n_nodes, method, test_iters, output_file):
             f = None
         else:
             f = open("../results/multiclass_adaboost_outputs.txt", "a")
-               
-        print("Using " + method + " multiclass adaboost on " + dataset_name + " dataset with " + str(n_nodes) + " terminal nodes", file=f)
             
         if method == "R":
             scores = multiclass_adaboost_cov(train_X, train_y, test_X, test_y, test_iters, n_nodes)
@@ -75,7 +73,7 @@ def predict(dataset_name, n_nodes, method, test_iters, output_file):
             scores = multiclass_adaboost(train_X, train_y, test_X, test_y, test_iters, n_nodes)
         
         for i in range(len(test_iters)):
-            print('Accuracy after {} iters ='.format(test_iters[i]), scores[i], file=f)
+            print('Accuracy after {} iters using {} multiclass adaboost on CIFAR with {} nodes ='.format(test_iters[i], method, n_nodes), scores[i], file=f)
         print(file=f)
 
 if __name__ == '__main__':

@@ -1,0 +1,42 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: scikit-learn==0.22 in /home/nguyent98/.local/lib/python3.8/site-packages (0.22)
+Requirement already satisfied: joblib>=0.11 in /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2021-03-tf2/e54ecce8/lib/python3.8/site-packages (from scikit-learn==0.22) (1.0.1)
+Requirement already satisfied: scipy>=0.17.0 in /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2021-03-tf2/e54ecce8/lib/python3.8/site-packages (from scikit-learn==0.22) (1.6.3)
+Requirement already satisfied: numpy>=1.11.0 in /share/apps/anaconda-ci/fgci-centos7-anaconda/software/anaconda/2021-03-tf2/e54ecce8/lib/python3.8/site-packages (from scikit-learn==0.22) (1.20.2)
+/home/nguyent98/.local/lib/python3.8/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.cluster.k_means_ module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.cluster. Anything that cannot be imported from sklearn.cluster is now part of the private API.
+  warnings.warn(message, FutureWarning)
+Traceback (most recent call last):
+  File "../algorithm_codes/multiclass_kernel_svm.py", line 160, in <module>
+    predict(args.dataset_name, args.method, args.output)
+  File "../algorithm_codes/multiclass_kernel_svm.py", line 145, in predict
+    score = multiclass_kernel_SVM(train_X, train_y, test_X, test_y, method)
+  File "../algorithm_codes/multiclass_kernel_svm.py", line 92, in multiclass_kernel_SVM
+    gram_train = np.dot(train_X, train_X.T)
+  File "<__array_function__ internals>", line 5, in dot
+numpy.core._exceptions.MemoryError: Unable to allocate 183. GiB for an array with shape (156776, 156776) and data type float64
+srun: error: csl27: task 0: Exited with exit code 1
+srun: Terminating job step 62500588.1
+/home/nguyent98/.local/lib/python3.8/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.cluster.k_means_ module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.cluster. Anything that cannot be imported from sklearn.cluster is now part of the private API.
+  warnings.warn(message, FutureWarning)
+/scratch/work/nguyent98/ped_detection_summer/summer_project/algorithm_codes/pyriemann/utils/base.py:12: RuntimeWarning: invalid value encountered in log
+  eigvals = numpy.diag(operator(eigvals))
+/scratch/work/nguyent98/ped_detection_summer/summer_project/algorithm_codes/pyriemann/utils/base.py:12: RuntimeWarning: divide by zero encountered in log
+  eigvals = numpy.diag(operator(eigvals))
+Traceback (most recent call last):
+  File "../algorithm_codes/multiclass_kernel_svm.py", line 160, in <module>
+    predict(args.dataset_name, args.method, args.output)
+  File "../algorithm_codes/multiclass_kernel_svm.py", line 145, in predict
+    score = multiclass_kernel_SVM(train_X, train_y, test_X, test_y, method)
+  File "../algorithm_codes/multiclass_kernel_svm.py", line 65, in multiclass_kernel_SVM
+    gamma = _compute_gamma_auto(train_X)
+  File "../algorithm_codes/multiclass_kernel_svm.py", line 34, in _compute_gamma_auto
+    mu = mean_logeuclid(X_train)
+  File "/scratch/work/nguyent98/ped_detection_summer/summer_project/algorithm_codes/pyriemann/utils/mean.py", line 92, in mean_logeuclid
+    C = expm(T)
+  File "/scratch/work/nguyent98/ped_detection_summer/summer_project/algorithm_codes/pyriemann/utils/base.py", line 62, in expm
+    return _matrix_operator(Ci, numpy.exp)
+  File "/scratch/work/nguyent98/ped_detection_summer/summer_project/algorithm_codes/pyriemann/utils/base.py", line 10, in _matrix_operator
+    raise ValueError("Covariance matrices must be positive definite. Add regularization to avoid this error.")
+ValueError: Covariance matrices must be positive definite. Add regularization to avoid this error.
+srun: error: csl27: task 0: Exited with exit code 1
+srun: Terminating job step 62500588.2
