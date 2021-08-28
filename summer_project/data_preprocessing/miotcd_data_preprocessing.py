@@ -14,8 +14,9 @@ classes.append("../Datasets/MIO-TCD-Classification/train/motorcycle/*.jpg")
 classes.append("../Datasets/MIO-TCD-Classification/train/non-motorized_vehicle/*.jpg")
 classes.append("../Datasets/MIO-TCD-Classification/train/single_unit_truck/*.jpg")
 classes.append("../Datasets/MIO-TCD-Classification/train/work_van/*.jpg")
+num_regions = 5
 
-samples, samples_cov, labels = process_classes_list(classes)
+samples, samples_cov, labels = process_classes_list(classes, num_regions)
 
 data_X = np.vstack(samples)
 data_X_cov = np.vstack(samples_cov)

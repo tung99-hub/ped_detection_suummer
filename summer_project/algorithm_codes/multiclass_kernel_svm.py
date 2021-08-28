@@ -21,7 +21,7 @@ def _compute_gamma_auto(X_train):
 
     Parameters
     ----------
-    X_train : array of shape (n_samples, n_features)
+    X_train : array of shape (n_samples, n_features, n_features)
         Training matrix
 
     Returns
@@ -82,20 +82,16 @@ def multiclass_kernel_SVM(train_X, train_y, test_X, test_y, method):
         gram_matrix_test = np.exp(-gamma*pairwise_distances_test)
         
         # Training and testing a kernel SVM
-        clf = SVC(kernel='precomputed', gamma=gamma, random_state=0, break_ties=True, class_weight='balanced')        
+        clf = SVC(kernel='precomputed', gamma=gamma, random_state=0, class_weight='balanced')        
         clf.fit(gram_matrix, train_y)            
         y_pred = clf.predict(gram_matrix_test)        
         score = accuracy_score(y_pred, test_y)
         
     elif method == 'E':
-        # Kernel function (a bit different in the Euclidean case)
-        gram_train = np.dot(train_X, train_X.T)
-        gram_test = np.dot(test_X, train_X.T)
-        
         # Training and testing a kernel SVM
-        clf = SVC(kernel='precomputed', random_state=0, break_ties=True, class_weight='balanced')
-        clf.fit(gram_train, train_y)
-        y_pred = clf.predict(gram_test)
+        clf = SVC(kernel='rbf', gamma='scale', random_state=0, class_weight='balanced')
+        clf.fit(train_X, train_y)
+        y_pred = clf.predict(test_X)
         score = accuracy_score(y_pred, test_y)
     
     return score
@@ -150,6 +146,7 @@ def predict(dataset_name, method, output_file):
         print('Average score across ' + str(n_splits) + ' folds = ', np.mean(scores), file=file)
         print(file=file)                  
                           
+predict('MIO-TCD', 'R', 'None')
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-dataset_name", help="Name of the dataset, can be either CIFAR, TAU or MIO-TCD")

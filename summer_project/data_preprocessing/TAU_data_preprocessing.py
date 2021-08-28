@@ -5,8 +5,7 @@ Created on Sun Jul  4 22:07:06 2021
 @author: subject F
 """
 import numpy as np
-from utils import compute_eight_dimensional_feature, vech, get_features, \
-                    process_classes_list
+from utils import process_classes_list
 
 classes = []
 # Get directory of the 17 classes
@@ -21,8 +20,9 @@ classes.append('../Datasets/TAU_vehicles/train/Tank/*.jpg')
 classes.append('../Datasets/TAU_vehicles/train/Taxi/*.jpg')
 classes.append('../Datasets/TAU_vehicles/train/Truck/*.jpg')
 classes.append('../Datasets/TAU_vehicles/train/Van/*.jpg')
+num_regions = 5
 
-samples, samples_cov, labels = process_classes_list(classes)
+samples, samples_cov, labels = process_classes_list(classes, num_regions)
 
 data_X = np.vstack(samples)
 data_X_cov = np.vstack(samples_cov)
