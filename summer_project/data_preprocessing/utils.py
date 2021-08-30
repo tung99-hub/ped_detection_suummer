@@ -56,10 +56,9 @@ def get_features(dataset_path, num_regions):
     cov_list = np.zeros((N, 8, 8))
     euc_list = np.zeros((N, 36))
     for i in range(len(image_paths)):
-        print(i)
         im = color.rgb2gray(io.imread(image_paths[i]))
         w, h = im.shape
-        sub_regions_list = generate_sub_regions_random(num_regions, w, h, np.sqrt(num_regions), np.sqrt(num_regions))
+        sub_regions_list = generate_sub_regions_random(num_regions, w, h, 1.25, 1.25)
         for j in range(len(sub_regions_list)):
             x_j, y_j, w_j, h_j = sub_regions_list[j]
             sub_im = im[ y_j : y_j+h_j, x_j : x_j+w_j ]

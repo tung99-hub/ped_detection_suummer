@@ -176,3 +176,40 @@ def generate_sub_regions_random_with_overlap_constraint(N_R, h, w, n_h, n_w, ove
                 pbar.update(1)
 
     return sub_regions_list
+
+def generate_sub_regions_random(N_R, h, w, n_h, n_w, seed=None, progress=False):
+    """ Function to obtain a uniformly random sampling for the sub_regions.
+
+        Usage: sub_regions_list = generate_sub_regions_random(N_R, h, w, n_h, n_w, seed, progress)
+        Inputs:
+            * N_R = an int corresponding to number of regions to generate.
+            * h = an int corresponding to height of the image.
+            * w = an int corresponding to width of the image.
+            * n_w = an int so that the sub_regions are of width that is minimum \ceil{w/n_w}.
+            * n_h = an int so that the sub_regions are of height that is minimum \ceil{h/n_h}.
+            * seed = an int which is the seed for rng so that it is reproducible.
+            * progress = a boolean to show or not a progress bar for the generation.
+        Outputs:
+            * sub_regions_list = a list of ints [x_j, y_j, w_j, h_j] where:
+                - (x_j, y_j) are the coordinates of the left corner of the region
+                - (w_j, h_j) are the width and heigth of the region
+    """
+
+
+    if seed is None:
+        rng = np.random.RandomState(seed)
+    else:
+        rng = seed
+
+    sub_regions_list = []
+    if progress:
+        pbar = tqdm(total=N_R)
+    for j in range(N_R):
+        x_j = rng.randint(0, w - int(np.ceil(w/n_w)))
+        y_j = rng.randint(0, h - int(np.ceil(h/n_h)))
+        w_j = rng.randint(int(np.ceil(w/n_w)), w - x_j)
+        h_j = rng.randint(int(np.ceil(h/n_h)), h - y_j)
+        sub_regions_list.append( (x_j, y_j, w_j, h_j) )
+        if progress:
+                pbar.update(1)
+    return sub_regions_list

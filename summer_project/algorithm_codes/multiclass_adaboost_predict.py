@@ -51,7 +51,7 @@ def predict(dataset_name, n_nodes, method, test_iters, output_file):
         
         mean_scores = np.mean(scores_by_folds, axis=0)
         for i in range(len(mean_scores)):
-            print('Mean accuracy on fold {} after {} iters ='.format(i, test_iters[i]), mean_scores[i], file=f)
+            print('Mean accuracy after {} iters ='.format(test_iters[i]), mean_scores[i], file=f)
         print('Overall mean accuracy using {} multiclass adaboost on {} with {} nodes ='.format(method, dataset_name, n_nodes), np.mean(mean_scores), file=f)
         print(file=f)
     

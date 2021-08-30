@@ -145,7 +145,6 @@ def predict(dataset_name, method, output_file):
         print('Average score across {} folds using {} kernel SVM on {} dataset ='.format(n_splits, method, dataset_name), np.mean(scores), file=file)
         print(file=file)                  
                           
-predict('MIO-TCD', 'R', 'None')
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-dataset_name", help="Name of the dataset, can be either CIFAR, TAU or MIO-TCD")

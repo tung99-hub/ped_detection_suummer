@@ -8,7 +8,7 @@ import numpy as np
 from utils import process_classes_list
 
 classes = []
-# Get directory of the 17 classes
+# Get directory of the 11 classes
 classes.append('../Datasets/TAU_vehicles/train/Ambulance/*.jpg')
 classes.append('../Datasets/TAU_vehicles/train/Bus/*.jpg')
 classes.append('../Datasets/TAU_vehicles/train/Car/*.jpg')

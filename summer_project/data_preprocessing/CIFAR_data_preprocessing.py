@@ -11,7 +11,7 @@ import torchvision
 data_dir = '../Datasets'
 trainset = torchvision.datasets.CIFAR10(root=data_dir)
 testset = torchvision.datasets.CIFAR10(root=data_dir, train=False)
-num_regions = 4
+num_regions = 2
 subregion_ratio = 1.25
 train_sample_size = len(trainset) * num_regions
 test_sample_size = len(testset) * num_regions

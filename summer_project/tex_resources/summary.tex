@@ -12,7 +12,7 @@
 
 \title{Summary of summer work}
 \author{Tung Nguyen Quang}
-\date{23th August 2021}
+\date{30th August 2021}
 
 \begin{document}
 \maketitle
@@ -34,7 +34,7 @@ For this research, 3 data-sets have been found to be suitable for testing the al
 \subsection{CIFAR-10}
 The data-set contains 60000 32x32 images of 10 classes, with 6000 images for each. Among the 10 classes, 5 belong to the animals group (cat, deer, dog, frog, horse), and 5 belong to the vehicles group (airplane, automobile, horse, ship, truck). Some example images can be found in Figure \ref{img:CIFAR-images}.
 
-\begin{figure}[h]
+\begin{figure}[hbt!]
 \caption{Sample images from CIFAR data-set}
 \label{img:CIFAR-images}
 \centering
@@ -47,7 +47,7 @@ Even though half the data is not vehicle-related, a vehicle classification task 
 \subsection{MIO-TCD}
 The data-set was used for the Traffic Surveillance Workshop and Challenge (TSWC) 2017, containing 648959 images of 11 classes, most of which are related to vehicles. Some sample images can be viewed in Figure \ref{img:MIOTCD-images}.
 
-\begin{figure}[h]
+\begin{figure}[hbt!]
 \caption{Sample images from MIO-TCD data-set}
 \label{img:MIOTCD-images}
 \centering
@@ -60,7 +60,7 @@ Given the large size of the data-set, some classes have been removed for this te
 \subsection{TAU-Vehicle}
 This data-set comes from a contest during a Pattern Recognition course from Tampere Universities. It contains around 36000 images of 17 class: Ambulance, Boat, Cart, Limousine, Snowmobile, Truck, Barge, Bus, Caterpillar, Motorcycle, Tank, Van, Bicycle, Car, Helicopter, Segway, Taxi. Readers can refer to Figure \ref{img:TAU-images} for sample images.
 
-\begin{figure}[h]
+\begin{figure}[hbt!]
 \caption{Sample images from TAU-Vehicle data-set}
 \label{img:TAU-images}
 \centering
@@ -168,6 +168,10 @@ The distance function $d_{L}$ mentioned above depends on where the data lies, it
 \begin{center}
     $d_{L}(\bm{X, Y}) = \|\log(\bm{X}^{1/2}\bm{YX}^{1/2})\|_{F}$
 \end{center}
+In the Riemannian case, there is an extra parameter that needs to be determined to calculate the optimal $\gamma$, which is the log-Euclidean mean:
+\begin{center}
+    $\bm{\Pi_{L}}({\{\alpha_{i}, \bm{X}_{i}\}}_{1\leq i \leq N}) = \exp(\sum_{i=1}^{N} \alpha_{i}\log(\bm{X}_{i}))$
+\end{center}
 The value of $\gamma$ determines the extent to which a sample affects the others. According to \cite{sklearn_api}, higher $\gamma$ values lead to samples having to be closer to affect each other.
 
 \section{Methodologies}
@@ -181,22 +185,37 @@ Since a test set was only available for some of the data-sets (mostly due to the
 \hline
 \textbf{data-set}    & \multicolumn{1}{c}{\textbf{\# Train}} & \multicolumn{1}{c}{\textbf{\# Test}} & \multicolumn{1}{c}{\textbf{\# Classes}} \\ \hline
 CIFAR-10            & 60000                                 & 10000                                & 10                                      \\
-MIO-TCD             & 41478                                 & 5-fold CV                            & 7                                       \\
-TAU Vehicle         & $\sim$36000                           & 5-fold CV                            & 17                                      \\
+MIO-TCD             & 39194                                 & 5-fold CV                            & 6                                       \\
+TAU-Vehicle         & 16378                           & 5-fold CV                            & 11                                      \\
 \end{tabular}
 \end{table}
 \vspace{5mm}
 \noindent
 These data-sets were then converted into 8x8 covariance descriptors, which lie in the Riemannian manifold space. To test the methods in the normal Euclidean (vector) space, the top half of the matrices were flattened (including the diagonal) to a 36-wide vector due to the semi-positive-definiteness nature of the matrices.
 
+\noindent
+Instead of using the whole image, we randomly sample multiple sub-regions of the image, which is then converted into the same covariance descriptors as mentioned above. With this approach, the aim is to generate more samples than just the single training image, and hopefully the sub-regions can have a better focus on the target object than the whole image. A demonstration of this strategy can be seen below.
+
+\begin{figure}[hbt!]
+\caption{Sub-region sampling demonstration}
+\label{img:subregion_sampling}
+\centering
+\includegraphics[width=0.9\textwidth]{subregion_sampling.png}
+\end{figure}
+
+\noindent
 After preprocessing the data-sets to produce the Euclidean and Riemannian features, multi-class Logitboost and Adaboost algorithms were applied to both features with 2 different types of base estimator, 2-node and 8-node stumps, respectively. The accuracy is then obtained using the first 50, 100 and 200 iterations of each algorithm. 
 
+\noindent
 Additonally, multi-class kernel SVM was used as the third algorithm in the experiment. The general idea of the SVM is that the samples will be converted into a Gram matrix containing the "distance" between one and the rest of the samples. In total, 2 Gram matrices will be made for each run, one comparing the training set with itself, while the other comparing the training with the test set. The only difference in the Riemannian and Euclidean is in how the "distance" is calculated, with the l2-norm and geodesic distance defined for the Euclidean and Riemannian case respectively.
 
 \section{Results}
-This section presents the results obtained from using the methods mentioned above, which can be found in Table \ref{tab:result-table}.
+This section presents the results obtained from using the methods mentioned above.
 
-\begin{table}
+\subsection{No sub-region approach}
+The results can be seen in Table \ref{tab:result-table}. Note that this method is no longer used, so the results can be quite outdated.
+
+\begin{table}[hbt!]
 \centering
 \caption{Accuracy of classification algorithms}
 \label{tab:result-table}
@@ -223,7 +242,7 @@ This section presents the results obtained from using the methods mentioned abov
                                        & \multicolumn{2}{l}{\textit{\textbf{TAU-Vehicle}}}         &                                 &                                  &                                  &                                 &                                  &                                  \\
 \multirow{3}{*}{E}                     & \multicolumn{2}{l}{Adaboost}                              & 0.413                           & 0.440                            & 0.414                            & 0.376                           & 0.358                            & 0.370                            \\
                                        & \multicolumn{2}{l}{Logitboost}                            & 0.533                           & 0.547                            & 0.555                            & 0.541                           & 0.530                            & 0.528                            \\
-                                       & \multicolumn{2}{l}{RBF SVM}                               & \multicolumn{6}{c}{No data}                                                                                                                                                                                   \\
+                                       & \multicolumn{2}{l}{RBF SVM}                               & \multicolumn{6}{c}{0.079}                                                                                                                                                                                   \\
 \multirow{3}{*}{R}                     & \multicolumn{2}{l}{Adaboost}                              & 0.452                           & 0.425                            & 0.405                            & 0.398                           & 0.397                            & 0.403                            \\
                                        & \multicolumn{2}{l}{Logitboost}                            & 0.566                           & 0.576                            & 0.584                            & 0.565                           & 0.558                            & 0.555                            \\
                                        & \multicolumn{2}{l}{RBF SVM}                               & \multicolumn{6}{c}{0.269}                                                                                                                                                                                     \\ \hline
@@ -234,10 +253,44 @@ This section presents the results obtained from using the methods mentioned abov
 Overall, the Riemannian versions of the algorithms seem to perform better than their Euclidean counterpart, hinting that preserving the structure of the SPD matrices might play an important role in training the models. Additionally, increasing the number of iterations generally improves the accuracy of the predictions, but increasing the number of terminal nodes witness contradicting effects. While CIFAR-10 and MIO-TCD benefits ever so slightly from increasing the number of nodes, TAU-Vehicle does not seem to enjoy the increase in terminal nodes, and oftentimes in iterations as well.
 
 \noindent
-The accuracy score for the kernel SVM method is not very good at the moment, possibly due to the choice of gamma, or even the kernel itself. To improve the accuracy, one can try to sample multiple subwindows of an image, rather than using the whole image on its own. With this way, the number of available data will greatly increase, leading to more thorough training for the classifiers.
+The accuracy score for the kernel SVM method is not very good at the moment, possibly due to the choice of $\gamma$, or even the kernel itself. To improve the accuracy, one can try to sample multiple subwindows of an image, rather than using the whole image on its own. With this way, the number of available data will greatly increase, leading to more thorough training for the classifiers.
 
-\noindent
-No data can be retrieved for the kernel SVM case of the TAU-Vehicle data-set, due to the script timing out on the Triton machine. One possible solution is to try utilizing the GPU for rapid calculations, but it might take some time to get it running on Triton machines.
+\subsection{Sub-region sampling approach}
+The results for this strategy can be found in Table \ref{tab:subsampling_results}. Due to the incompleteness of the table, no conclusions can be drawn from this approach yet.
+
+\begin{table}[hbt!]
+\centering
+\caption{Accuracy of classification algorithms with sub-region sampling}
+\label{tab:subsampling_results}
+\begin{tabular}{lllllllll}
+\hline
+                                       & \textbf{}       & \multicolumn{1}{c}{\textbf{}}           & \multicolumn{3}{c}{\textbf{2 Terminal Nodes}}                                                         & \multicolumn{3}{c}{\textbf{8 Terminal Nodes}}                                                         \\
+                                       & \textbf{Method} & \multicolumn{1}{c}{\textbf{Iterations}} & \multicolumn{1}{c}{\textbf{50}} & \multicolumn{1}{c}{\textbf{100}} & \multicolumn{1}{c}{\textbf{200}} & \multicolumn{1}{c}{\textbf{50}} & \multicolumn{1}{c}{\textbf{100}} & \multicolumn{1}{c}{\textbf{200}} \\ \hline
+                                       & \multicolumn{2}{l}{\textit{\textbf{CIFAR-10}}}            &                                 &                                  &                                  &                                 &                                  &                                  \\
+\multicolumn{1}{c}{\multirow{3}{*}{E}} & \multicolumn{2}{l}{Adaboost}                              &                                 &                                  &                                  &                                 &                                  &                                  \\
+\multicolumn{1}{c}{}                   & \multicolumn{2}{l}{Logitboost}                            &                                 &                                  &                                  &                                 &                                  &                                  \\
+\multicolumn{1}{c}{}                   & \multicolumn{2}{l}{RBF SVM}                               & \multicolumn{6}{c}{0.245}                                                                                                                                                                                     \\
+\multirow{3}{*}{R}                     & \multicolumn{2}{l}{Adaboost}                              &                                 &                                  &                                  &                                 &                                  &                                  \\
+                                       & \multicolumn{2}{l}{Logitboost}                            &                                 &                                  &                                  &                                 &                                  &                                  \\
+                                       & \multicolumn{2}{l}{RBF SVM}                               & \multicolumn{6}{c}{}                                                                                                                                                                                          \\
+                                       &                 &                                         &                                 &                                  &                                  &                                 &                                  &                                  \\
+                                       & \multicolumn{2}{l}{\textit{\textbf{MIO-TCD}}}             &                                 &                                  &                                  &                                 &                                  &                                  \\
+\multirow{3}{*}{E}                     & \multicolumn{2}{l}{Adaboost}                              &                                 &                                  &                                  & 0.525                           & 0.537                            & 0.550                            \\
+                                       & \multicolumn{2}{l}{Logitboost}                            &                                 &                                  &                                  & 0.685                           & 0.717                            & 0.746                            \\
+                                       & \multicolumn{2}{l}{RBF SVM}                               & \multicolumn{6}{c}{}                                                                                                                                                                                          \\
+\multirow{3}{*}{R}                     & \multicolumn{2}{l}{Adaboost}                              & 0.427                           & 0.430                            & 0.437                            &                                 &                                  &                                  \\
+                                       & \multicolumn{2}{l}{Logitboost}                            &                                 &                                  &                                  &                                 &                                  &                                  \\
+                                       & \multicolumn{2}{l}{RBF SVM}                               & \multicolumn{6}{c}{}                                                                                                                                                                                          \\
+                                       &                 &                                         &                                 &                                  &                                  &                                 &                                  &                                  \\
+                                       & \multicolumn{2}{l}{\textit{\textbf{TAU-Vehicle}}}         &                                 &                                  &                                  &                                 &                                  &                                  \\
+\multirow{3}{*}{E}                     & \multicolumn{2}{l}{Adaboost}                              &                                 &                                  &                                  & 0.454                           & 0.463                            & 0.458                            \\
+                                       & \multicolumn{2}{l}{Logitboost}                            &                                 &                                  &                                  &                                 &                                  &                                  \\
+                                       & \multicolumn{2}{l}{RBF SVM}                               & \multicolumn{6}{c}{}                                                                                                                                                                                          \\
+\multirow{3}{*}{R}                     & \multicolumn{2}{l}{Adaboost}                              & 0.503                           & 0.516                            & 0.522                            &                                 &                                  &                                  \\
+                                       & \multicolumn{2}{l}{Logitboost}                            &                                 &                                  &                                  &                                 &                                  &                                  \\
+                                       & \multicolumn{2}{l}{RBF SVM}                               & \multicolumn{6}{c}{}                                                                                                                                                                                          \\ \hline
+\end{tabular}
+\end{table}
 
 \newpage
 

@@ -1,0 +1,286 @@
+Using Euclidean multiclass logitboost on CIFAR dataset with 2 terminal nodes
+
+Euclidean accuracy with 50 iterations = 0.3938
+Euclidean accuracy with 100 iterations = 0.3938
+Euclidean accuracy with 200 iterations = 0.3938
+
+Using Euclidean multiclass logitboost on CIFAR dataset with 8 terminal nodes
+
+Euclidean accuracy with 50 iterations = 0.4017
+Euclidean accuracy with 100 iterations = 0.4017
+Euclidean accuracy with 200 iterations = 0.4017
+
+Using Euclidean multiclass logitboost on MIO-TCD dataset with 2 terminal nodes
+Euclidean accuracy of fold 1 with 50 iterations = 0.587632594021215
+Euclidean accuracy of fold 1 with 100 iterations = 0.587632594021215
+Euclidean accuracy of fold 1 with 200 iterations = 0.587632594021215
+
+Euclidean accuracy of fold 2 with 50 iterations = 0.5893201542912246
+Euclidean accuracy of fold 2 with 100 iterations = 0.5893201542912246
+Euclidean accuracy of fold 2 with 200 iterations = 0.5893201542912246
+
+Euclidean accuracy of fold 3 with 50 iterations = 0.5935390549662488
+Euclidean accuracy of fold 3 with 100 iterations = 0.5935390549662488
+Euclidean accuracy of fold 3 with 200 iterations = 0.5935390549662488
+
+Euclidean accuracy of fold 4 with 50 iterations = 0.5801084990958408
+Euclidean accuracy of fold 4 with 100 iterations = 0.5801084990958408
+Euclidean accuracy of fold 4 with 200 iterations = 0.5801084990958408
+
+Euclidean accuracy of fold 5 with 50 iterations = 0.580952380952381
+Euclidean accuracy of fold 5 with 100 iterations = 0.580952380952381
+Euclidean accuracy of fold 5 with 200 iterations = 0.580952380952381
+
+Mean score across 5 folds with 50 iterations using Euclidean = 0.586310536665382
+Mean score across 5 folds with 100 iterations using Euclidean = 0.586310536665382
+Mean score across 5 folds with 200 iterations using Euclidean = 0.586310536665382
+
+Using Euclidean multiclass logitboost on TAU dataset with 2 terminal nodes
+Euclidean accuracy of fold 1 with 50 iterations = 0.463719022998752
+Euclidean accuracy of fold 1 with 100 iterations = 0.463719022998752
+Euclidean accuracy of fold 1 with 200 iterations = 0.463719022998752
+
+Euclidean accuracy of fold 2 with 50 iterations = 0.46746300588340167
+Euclidean accuracy of fold 2 with 100 iterations = 0.46746300588340167
+Euclidean accuracy of fold 2 with 200 iterations = 0.46746300588340167
+
+Euclidean accuracy of fold 3 with 50 iterations = 0.4665715813870565
+Euclidean accuracy of fold 3 with 100 iterations = 0.4665715813870565
+Euclidean accuracy of fold 3 with 200 iterations = 0.4665715813870565
+
+Euclidean accuracy of fold 4 with 50 iterations = 0.47512925655197
+Euclidean accuracy of fold 4 with 100 iterations = 0.47512925655197
+Euclidean accuracy of fold 4 with 200 iterations = 0.47512925655197
+
+Euclidean accuracy of fold 5 with 50 iterations = 0.4719201283651275
+Euclidean accuracy of fold 5 with 100 iterations = 0.4719201283651275
+Euclidean accuracy of fold 5 with 200 iterations = 0.4719201283651275
+
+Mean score across 5 folds with 50 iterations using Euclidean = 0.4689605990372615
+Mean score across 5 folds with 100 iterations using Euclidean = 0.4689605990372615
+Mean score across 5 folds with 200 iterations using Euclidean = 0.4689605990372615
+
+Using Euclidean multiclass logitboost on MIO-TCD dataset with 8 terminal nodes
+Euclidean accuracy of fold 1 with 50 iterations = 0.7184185149469624
+Euclidean accuracy of fold 1 with 100 iterations = 0.7184185149469624
+Euclidean accuracy of fold 1 with 200 iterations = 0.7184185149469624
+
+Euclidean accuracy of fold 2 with 50 iterations = 0.7175747348119575
+Euclidean accuracy of fold 2 with 100 iterations = 0.7175747348119575
+Euclidean accuracy of fold 2 with 200 iterations = 0.7175747348119575
+
+Euclidean accuracy of fold 3 with 50 iterations = 0.7121504339440694
+Euclidean accuracy of fold 3 with 100 iterations = 0.7121504339440694
+Euclidean accuracy of fold 3 with 200 iterations = 0.7121504339440694
+
+Euclidean accuracy of fold 4 with 50 iterations = 0.7187462326702833
+Euclidean accuracy of fold 4 with 100 iterations = 0.7187462326702833
+Euclidean accuracy of fold 4 with 200 iterations = 0.7187462326702833
+
+Euclidean accuracy of fold 5 with 50 iterations = 0.721880650994575
+Euclidean accuracy of fold 5 with 100 iterations = 0.721880650994575
+Euclidean accuracy of fold 5 with 200 iterations = 0.721880650994575
+
+Mean score across 5 folds with 50 iterations using Euclidean = 0.7177541134735697
+Mean score across 5 folds with 100 iterations using Euclidean = 0.7177541134735697
+Mean score across 5 folds with 200 iterations using Euclidean = 0.7177541134735697
+
+Using Euclidean multiclass logitboost on TAU dataset with 8 terminal nodes
+Euclidean accuracy of fold 1 with 50 iterations = 0.46300588340167587
+Euclidean accuracy of fold 1 with 100 iterations = 0.46300588340167587
+Euclidean accuracy of fold 1 with 200 iterations = 0.46300588340167587
+
+Euclidean accuracy of fold 2 with 50 iterations = 0.469245854876092
+Euclidean accuracy of fold 2 with 100 iterations = 0.469245854876092
+Euclidean accuracy of fold 2 with 200 iterations = 0.469245854876092
+
+Euclidean accuracy of fold 3 with 50 iterations = 0.463897307898021
+Euclidean accuracy of fold 3 with 100 iterations = 0.463897307898021
+Euclidean accuracy of fold 3 with 200 iterations = 0.463897307898021
+
+Euclidean accuracy of fold 4 with 50 iterations = 0.4653235870921733
+Euclidean accuracy of fold 4 with 100 iterations = 0.4653235870921733
+Euclidean accuracy of fold 4 with 200 iterations = 0.4653235870921733
+
+Euclidean accuracy of fold 5 with 50 iterations = 0.46692815118559455
+Euclidean accuracy of fold 5 with 100 iterations = 0.46692815118559455
+Euclidean accuracy of fold 5 with 200 iterations = 0.46692815118559455
+
+Mean score across 5 folds with 50 iterations using Euclidean = 0.4656801568907113
+Mean score across 5 folds with 100 iterations using Euclidean = 0.4656801568907113
+Mean score across 5 folds with 200 iterations using Euclidean = 0.4656801568907113
+
+Using Euclidean multiclass logitboost on CIFAR dataset with 2 terminal nodes
+
+Euclidean accuracy with 50 iterations = 0.3556
+Euclidean accuracy with 100 iterations = 0.3767
+Euclidean accuracy with 200 iterations = 0.3938
+
+Using Euclidean multiclass logitboost on CIFAR dataset with 8 terminal nodes
+
+Euclidean accuracy with 50 iterations = 0.4049
+Euclidean accuracy with 100 iterations = 0.4115
+Euclidean accuracy with 200 iterations = 0.3966
+
+Using Euclidean multiclass logitboost on MIO-TCD dataset with 2 terminal nodes
+Euclidean accuracy of fold 1 with 50 iterations = 0.5489392478302797
+Euclidean accuracy of fold 1 with 100 iterations = 0.5703953712632595
+Euclidean accuracy of fold 1 with 200 iterations = 0.5859450337512054
+
+Euclidean accuracy of fold 2 with 50 iterations = 0.5420684667309547
+Euclidean accuracy of fold 2 with 100 iterations = 0.5644889103182257
+Euclidean accuracy of fold 2 with 200 iterations = 0.5824493731918997
+
+Euclidean accuracy of fold 3 with 50 iterations = 0.5411041465766635
+Euclidean accuracy of fold 3 with 100 iterations = 0.5726856316297011
+Euclidean accuracy of fold 3 with 200 iterations = 0.5889585342333655
+
+Euclidean accuracy of fold 4 with 50 iterations = 0.5523809523809524
+Euclidean accuracy of fold 4 with 100 iterations = 0.5763713080168776
+Euclidean accuracy of fold 4 with 200 iterations = 0.5903556359252562
+
+Euclidean accuracy of fold 5 with 50 iterations = 0.549367088607595
+Euclidean accuracy of fold 5 with 100 iterations = 0.5687763713080168
+Euclidean accuracy of fold 5 with 200 iterations = 0.5832429174201326
+
+Mean score across 5 folds with 50 iterations using Euclidean = 0.5467719804252891
+Mean score across 5 folds with 100 iterations using Euclidean = 0.5705435185072162
+Mean score across 5 folds with 200 iterations using Euclidean = 0.5861902989043719
+
+Using Euclidean multiclass logitboost on TAU dataset with 2 terminal nodes
+Euclidean accuracy of fold 1 with 50 iterations = 0.4433945444820824
+Euclidean accuracy of fold 1 with 100 iterations = 0.45605277233018365
+Euclidean accuracy of fold 1 with 200 iterations = 0.46282759850240685
+
+Euclidean accuracy of fold 2 with 50 iterations = 0.45302192904261007
+Euclidean accuracy of fold 2 with 100 iterations = 0.4678195756819397
+Euclidean accuracy of fold 2 with 200 iterations = 0.4737029773578178
+
+Euclidean accuracy of fold 3 with 50 iterations = 0.4392939917988946
+Euclidean accuracy of fold 3 with 100 iterations = 0.4564093421287217
+Euclidean accuracy of fold 3 with 200 iterations = 0.46692815118559455
+
+Euclidean accuracy of fold 4 with 50 iterations = 0.4408985558923159
+Euclidean accuracy of fold 4 with 100 iterations = 0.45320021394187915
+Euclidean accuracy of fold 4 with 200 iterations = 0.4722766981636655
+
+Euclidean accuracy of fold 5 with 50 iterations = 0.4323408807274024
+Euclidean accuracy of fold 5 with 100 iterations = 0.45302192904261007
+Euclidean accuracy of fold 5 with 200 iterations = 0.46728472098413265
+
+Mean score across 5 folds with 50 iterations using Euclidean = 0.4417899803886611
+Mean score across 5 folds with 100 iterations using Euclidean = 0.45730076662506686
+Mean score across 5 folds with 200 iterations using Euclidean = 0.46860402923872346
+
+Using Euclidean multiclass logitboost on MIO-TCD dataset with 8 terminal nodes
+Euclidean accuracy of fold 1 with 50 iterations = 0.6823770491803278
+Euclidean accuracy of fold 1 with 100 iterations = 0.7051591128254581
+Euclidean accuracy of fold 1 with 200 iterations = 0.7170925747348119
+
+Euclidean accuracy of fold 2 with 50 iterations = 0.6793635486981678
+Euclidean accuracy of fold 2 with 100 iterations = 0.7054001928640309
+Euclidean accuracy of fold 2 with 200 iterations = 0.7167309546769528
+
+Euclidean accuracy of fold 3 with 50 iterations = 0.6900916104146577
+Euclidean accuracy of fold 3 with 100 iterations = 0.7132352941176471
+Euclidean accuracy of fold 3 with 200 iterations = 0.7251687560270009
+
+Euclidean accuracy of fold 4 with 50 iterations = 0.6766726943942134
+Euclidean accuracy of fold 4 with 100 iterations = 0.7033152501506932
+Euclidean accuracy of fold 4 with 200 iterations = 0.7175406871609403
+
+Euclidean accuracy of fold 5 with 50 iterations = 0.6707655213984328
+Euclidean accuracy of fold 5 with 100 iterations = 0.6960819770946354
+Euclidean accuracy of fold 5 with 200 iterations = 0.710910186859554
+
+Mean score across 5 folds with 50 iterations using Euclidean = 0.6798540848171599
+Mean score across 5 folds with 100 iterations using Euclidean = 0.704638365410493
+Mean score across 5 folds with 200 iterations using Euclidean = 0.7174886318918519
+
+Using Riemannian multiclass logitboost on CIFAR dataset with 2 terminal nodes
+
+Riemannian accuracy with 50 iterations = 0.3983
+Riemannian accuracy with 100 iterations = 0.4202
+Riemannian accuracy with 200 iterations = 0.4333
+
+Using Riemannian multiclass logitboost on CIFAR dataset with 8 terminal nodes
+
+Riemannian accuracy with 50 iterations = 0.4426
+Riemannian accuracy with 100 iterations = 0.4438
+Riemannian accuracy with 200 iterations = 0.4353
+
+Using Euclidean multiclass logitboost on TAU dataset with 8 terminal nodes
+Euclidean accuracy of fold 1 with 50 iterations = 0.46835443037974683
+Euclidean accuracy of fold 1 with 100 iterations = 0.47405954715635584
+Euclidean accuracy of fold 1 with 200 iterations = 0.4622927438045997
+
+Euclidean accuracy of fold 2 with 50 iterations = 0.4788732394366197
+Euclidean accuracy of fold 2 with 100 iterations = 0.4719201283651275
+Euclidean accuracy of fold 2 with 200 iterations = 0.46336245320021396
+
+Euclidean accuracy of fold 3 with 50 iterations = 0.47976466393296485
+Euclidean accuracy of fold 3 with 100 iterations = 0.4760206810483152
+Euclidean accuracy of fold 3 with 200 iterations = 0.47156355856658944
+
+Euclidean accuracy of fold 4 with 50 iterations = 0.4753075414512391
+Euclidean accuracy of fold 4 with 100 iterations = 0.47013727937243716
+Euclidean accuracy of fold 4 with 200 iterations = 0.46585844178998037
+
+Euclidean accuracy of fold 5 with 50 iterations = 0.4815475129256552
+Euclidean accuracy of fold 5 with 100 iterations = 0.47619896594758426
+Euclidean accuracy of fold 5 with 200 iterations = 0.4724549830629346
+
+Mean score across 5 folds with 50 iterations using Euclidean = 0.47676947762524513
+Mean score across 5 folds with 100 iterations using Euclidean = 0.473667320377964
+Mean score across 5 folds with 200 iterations using Euclidean = 0.4671064360848636
+
+Using Riemannian multiclass logitboost on MIO-TCD dataset with 8 terminal nodes
+Riemannian accuracy of fold 1 with 50 iterations = 0.7110655737704918
+Riemannian accuracy of fold 1 with 100 iterations = 0.7352941176470589
+Riemannian accuracy of fold 1 with 200 iterations = 0.7532545805207329
+
+Riemannian accuracy of fold 2 with 50 iterations = 0.7161282545805208
+Riemannian accuracy of fold 2 with 100 iterations = 0.7336065573770492
+Riemannian accuracy of fold 2 with 200 iterations = 0.7480713596914176
+
+Riemannian accuracy of fold 3 with 50 iterations = 0.7099807135969142
+Riemannian accuracy of fold 3 with 100 iterations = 0.7328833172613307
+Riemannian accuracy of fold 3 with 200 iterations = 0.7444551591128254
+
+Riemannian accuracy of fold 4 with 50 iterations = 0.7091018685955395
+Riemannian accuracy of fold 4 with 100 iterations = 0.7355033152501507
+Riemannian accuracy of fold 4 with 200 iterations = 0.7498493068113321
+
+Riemannian accuracy of fold 5 with 50 iterations = 0.7200723327305606
+Riemannian accuracy of fold 5 with 100 iterations = 0.7422543701024714
+Riemannian accuracy of fold 5 with 200 iterations = 0.7561181434599156
+
+Mean score across 5 folds with 50 iterations using Riemannian = 0.7132697486548054
+Mean score across 5 folds with 100 iterations using Riemannian = 0.7359083355276121
+Mean score across 5 folds with 200 iterations using Riemannian = 0.7503497099192448
+
+Using Riemannian multiclass logitboost on MIO-TCD dataset with 2 terminal nodes
+Riemannian accuracy of fold 1 with 50 iterations = 0.5754580520732884
+Riemannian accuracy of fold 1 with 100 iterations = 0.5999276759884281
+Riemannian accuracy of fold 1 with 200 iterations = 0.6189729990356798
+
+Riemannian accuracy of fold 2 with 50 iterations = 0.5788331726133076
+Riemannian accuracy of fold 2 with 100 iterations = 0.6042671166827387
+Riemannian accuracy of fold 2 with 200 iterations = 0.6180086788813887
+
+Riemannian accuracy of fold 3 with 50 iterations = 0.5718418514946962
+Riemannian accuracy of fold 3 with 100 iterations = 0.5984811957569913
+Riemannian accuracy of fold 3 with 200 iterations = 0.6157184185149469
+
+Riemannian accuracy of fold 4 with 50 iterations = 0.5780590717299579
+Riemannian accuracy of fold 4 with 100 iterations = 0.5977094635322483
+Riemannian accuracy of fold 4 with 200 iterations = 0.6133815551537071
+
+Riemannian accuracy of fold 5 with 50 iterations = 0.5819168173598553
+Riemannian accuracy of fold 5 with 100 iterations = 0.611332127787824
+Riemannian accuracy of fold 5 with 200 iterations = 0.6273658830620856
+
+Mean score across 5 folds with 50 iterations using Riemannian = 0.577221793054221
+Mean score across 5 folds with 100 iterations using Riemannian = 0.6023435159496461
+Mean score across 5 folds with 200 iterations using Riemannian = 0.6186895069295616
+
