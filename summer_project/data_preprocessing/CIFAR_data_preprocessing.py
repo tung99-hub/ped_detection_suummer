@@ -13,8 +13,10 @@ trainset = torchvision.datasets.CIFAR10(root=data_dir)
 testset = torchvision.datasets.CIFAR10(root=data_dir, train=False)
 num_regions = 2
 subregion_ratio = 1.25
-train_sample_size = len(trainset) * num_regions
-test_sample_size = len(testset) * num_regions
+train_ims = 100
+test_ims = 100
+train_sample_size = train_ims * num_regions
+test_sample_size = test_ims * num_regions
 
 # Convert RGB image to grayscale
 train_data = np.dot(np.array(trainset.data)[...,:3], [0.299 , 0.587, 0.114])
@@ -29,7 +31,7 @@ test_X_euc = np.zeros((test_sample_size, 36))
 
 # Process training samples
 sub_regions = []
-for i in range(len(trainset)):
+for i in range(train_ims):
     print(i)
     im  = train_data[i, :, :]
     sub_regions_list = generate_sub_regions_random(num_regions, 32, 32, subregion_ratio, subregion_ratio)
@@ -46,7 +48,7 @@ for i in range(len(trainset)):
         train_y[i*num_regions + j] = label
     
 # Process testing samples
-for i in range(len(testset)):
+for i in range(test_ims):
     print(i)
     im = test_data[i, :, :]
     sub_regions_list = generate_sub_regions_random(num_regions, 32, 32, num_regions, subregion_ratio)
